@@ -13,6 +13,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     var landmarkNames = [String]()
     var landmarkImages = [UIImage]()
     
+    //Selected Images and Names
+    var chosenLandmarkNames = ""
+    var chosenLandmarkImages = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,6 +32,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         landmarkImages.append(UIImage(named: "taj-mahal")!)
     }
     
+    //Deleting Rows
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             landmarkNames.remove(at: indexPath.row)
@@ -42,8 +47,26 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
+    //Number of Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return landmarkNames.count
+    }
+    
+    //Segue to Second Screen - Selected Row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        chosenLandmarkNames = landmarkNames[indexPath.row]
+        chosenLandmarkImages = landmarkImages[indexPath.row]
+        
+        performSegue(withIdentifier: "toImageViewController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toImageViewController" {
+            let destinationVC = segue.destination as? ImageViewController
+            destinationVC?.selectedLandmarkName = chosenLandmarkNames
+            destinationVC?.selectedLandmarkImage = chosenLandmarkImages
+        }
     }
     
 }

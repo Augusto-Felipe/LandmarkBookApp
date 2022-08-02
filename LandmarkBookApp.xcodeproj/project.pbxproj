@@ -13,6 +13,7 @@
 		505B22252899CE850001CAFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505B22232899CE850001CAFE /* Main.storyboard */; };
 		505B22272899CE870001CAFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 505B22262899CE870001CAFE /* Assets.xcassets */; };
 		505B222A2899CE870001CAFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505B22282899CE870001CAFE /* LaunchScreen.storyboard */; };
+		505B22322899D8F20001CAFE /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B22312899D8F20001CAFE /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		505B22262899CE870001CAFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		505B22292899CE870001CAFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		505B222B2899CE870001CAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		505B22312899D8F20001CAFE /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				505B22262899CE870001CAFE /* Assets.xcassets */,
 				505B22282899CE870001CAFE /* LaunchScreen.storyboard */,
 				505B222B2899CE870001CAFE /* Info.plist */,
+				505B22312899D8F20001CAFE /* ImageViewController.swift */,
 			);
 			path = LandmarkBookApp;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				505B22222899CE850001CAFE /* ViewController.swift in Sources */,
 				505B221E2899CE850001CAFE /* AppDelegate.swift in Sources */,
+				505B22322899D8F20001CAFE /* ImageViewController.swift in Sources */,
 				505B22202899CE850001CAFE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
